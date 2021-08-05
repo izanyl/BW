@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<title>Gallery</title> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="css/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="https://allfont.net/allfont.css?fonts=agency-fb" rel="stylesheet" type="text/css" />
+</head>
+<body id="top">
+
+
+<div class="wrapper row0">
+  <nav id="mainav" class="hoc clear"> 
+    <ul class="clear">
+      <li class="active"><a href="index.html">Home</a></li>
+      <li><a class="active" href="About.html">About</a></li>
+      <li><a class="active" href="Artwork.html">CREATOR</a></li>
+      <li><a class="active" href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="wrapper row1">
+  <header id="header" class="hoc clear"> 
+    <h1><a href="index.html"></a></h1>
+    <a href="index.html"><img class="logo" src="img/SFLogo.png" style="width:100px;"></a>
+    <p></p>
+
+  </header>
+</div>
+
+
+<style>
+
+
+body {
+  background-color: #000000;
+
+  font-family:agency fb;font-style:normal;
+}
+
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 32.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1>GALLERY</h1>
+
+
+
+
+<!-- Portfolio Gallery Grid -->
+<div class="main">
+  <div class="column 1">
+    <div class="content">
+      <img src="https://i2.wp.com/obeygiant.com/images/2020/04/Obey-War-By-Numbers-Canvas_2019.jpg?fit=595%2C800&ssl=1" alt="Mountains" style="width:100%">
+      <h4>War by Numbers</h4>
+     
+    </div>
+  </div>
+  <div class="column 1">
+    <div class="content">
+    <img src="https://i1.wp.com/obeygiant.com/images/2020/04/Make-Art-Not-War-Canvas-2019-FNL.jpg?fit=596%2C800&ssl=1" alt="Lights" style="width:100%">
+      <h4>M.A.N.W</h4>
+     
+    </div>
+  </div>
+  <div class="column 1">
+    <div class="content">
+    <img src="https://i2.wp.com/obeygiant.com/images/2016/09/SInking-Liberty-Canvas-copy.jpg?fit=555%2C800&ssl=1" alt="Nature" style="width:100%">
+      <h4>Sinking Liberty</h4>
+     
+    </div>
+  </div>
+  
+  <div class="column 2">
+    <div class="content">
+      <img src="https://i1.wp.com/obeygiant.com/images/2016/09/PARIS-PALACE-OF-POWER-GRENADE.jpg?fit=621%2C800&ssl=1" alt="Car" style="width:100%">
+      <h4>Paris Palace</h4>
+    
+    </div>
+  </div>
+  <div class="column 2">
+    <div class="content">
+    <img src="https://i0.wp.com/obeygiant.com/images/2016/09/earth-crisis-drop_canvas.jpg?fit=593%2C800&ssl=1" alt="Car" style="width:100%">
+      <h4>Earth Crisis Drop</h4>
+    
+    </div>
+  </div>
+  <div class="column 2">
+    <div class="content">
+    <img src="https://i0.wp.com/obeygiant.com/images/2016/09/11th-hour-study.jpg?fit=582%2C800&ssl=1" alt="Car" style="width:100%">
+      <h4>11th Hour (STUDY)</h4>
+     
+    </div>
+  </div>
+
+  <div class="column 3">
+    <div class="content">
+      <img src="https://i2.wp.com/obeygiant.com/images/2015/09/peace-guard-copy.jpg?fit=547%2C800&ssl=1" alt="Car" style="width:100%">
+      <h4>Peace Gaurd</h4>
+   
+    </div>
+  </div>
+  <div class="column 3">
+    <div class="content">
+    <img src="https://i0.wp.com/obeygiant.com/images/2016/09/WATER-STUDY-PARIS.jpg?fit=632%2C800&ssl=1" alt="Car" style="width:100%">
+      <h4>Water Study</h4>
+     
+    </div>
+  </div>
+  <div class="column 3">
+    <div class="content">
+    <img src="https://i1.wp.com/obeygiant.com/images/2015/09/RISE-ABOVE-REBEL-CANVAS.jpg?fit=584%2C800&ssl=1" alt="Car" style="width:100%">
+      <h4>Rise Above Rebel</h4>
+     
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+</script>
+
+</body>
+</html>
